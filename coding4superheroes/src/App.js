@@ -2,6 +2,8 @@ import SVGHeader from "./components/SVGHeader";
 import TopBar from "./components/TopBar";
 import Blog from "./pages/blog/Blog";
 import Home from "./pages/home/Home";
+import About from "./pages/about/About";
+import Work from "./pages/work/Work";
 import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
 import Settings from "./pages/settings/Settings";
@@ -25,7 +27,9 @@ function App(props) {
         <TopBar/>
         <Routes>
           <Route exact path={"/"}element={<Home/>}/>
-          <Route  path="/blog" element={user ?<Blog/>: <Register/>}/>
+          <Route  path="/about" element={<About/>}/>
+          <Route  path="/work" element={<Work/>}/>
+          <Route  path="/blog" element={<Blog/>}/>
           <Route  path="/login" element={user ?<Home/>: <Login/>}/>
           <Route  path="/write" element={user ?<Write/> :<Register/>}/>
           <Route  path="/register" element={user ? <Home/> :<Register/>}/>

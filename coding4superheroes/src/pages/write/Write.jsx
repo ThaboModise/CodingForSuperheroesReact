@@ -41,25 +41,29 @@ export default function Write() {
         
     }
   return (
-    <div className="write">
-        {file && (
-            <img className="writeImg" src={URL.createObjectURL(file)} alt="" />
-        )}
-        
-        <form action="" className="writeForm" onSubmit={handleSubmit}>
-            <div className="writeFormGrp">
-                <label htmlFor="fileInput">
-                    <i className=" writeIcon fa fa-plus"></i>
-                </label>
-                <input style={{ display: "none"}} type="file" id="fileInput" onChange={(e)=>setFile(e.target.files[0])} />
-                <input type="text" placeholder="Title" className="writeInput" autoFocus={true} onChange={(e)=>setTitle(e.target.value)} />
-            </div>
-            <div className="writeFormGrp">
-                <textarea placeholder="Tell your story" type="text" className="writeInput writeText" onChange={(e)=>setDesc(e.target.value)}></textarea>
-            </div>
+    <>
+        <div className="write">
+            {file && (
+                <img className="writeImg" src={URL.createObjectURL(file)} alt="" />
+            )}
+            
+            <form action="" className="writeForm" onSubmit={handleSubmit}>
+                <div className="writeFormGrp">
+                    <label htmlFor="fileInput">
+                        <i className=" writeIcon fa fa-plus"></i>
+                    </label>
+                    <input style={{ display: "none"}} type="file" id="fileInput" onChange={(e)=>setFile(e.target.files[0])} />
+                    <input type="text" placeholder="Title" className="writeInput" autoFocus={true} onChange={(e)=>setTitle(e.target.value)} />
+                </div>
+                <div className="writeFormGrp">
+                    <textarea placeholder="Tell your story" type="text" className="writeInput writeText" onChange={(e)=>setDesc(e.target.value)}></textarea>
+                </div>
 
-            <button className="writeSubmit" type="submit">Publish</button>
-        </form>
-    </div>
+                <button className="writeSubmit" type="submit">Publish</button>
+            </form>
+        </div>
+    </>
+    
+
   )
 }

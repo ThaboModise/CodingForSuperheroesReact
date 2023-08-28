@@ -1,12 +1,19 @@
-import SVGHeader from "../../components/SVGHeader";
-import TopBar from "../../components/TopBar";
+import Showreel from "../../components/Showreel";
+import ShowreelParalexPage from "../../components/ShowreelParalexPage";
+import FooterDiv from "../../components/FooterDiv";
+
 
 
 export default function Work() {
+  
   return (
-    <div className="work">
-       
-    </div>
+    <>
+      <div className="work">
+        <ShowreelParalexPage/>
+        <Showreel/>
+        <FooterDiv/>
+        
+      </div>
+    </>
   )
 }
-

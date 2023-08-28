@@ -1,11 +1,17 @@
-import SVGHeader from "../../components/SVGHeader"
-import TopBar from "../../components/TopBar"
+
+import AboutColumnsMainDiv from "../../components/AboutColumnsMainDiv";
+
+import FooterDiv from "../../components/FooterDiv";
+
+
 
 
 export default function About() {
+  
   return (
-    <div className="about">
-
-    </div>
+    <>
+       <AboutColumnsMainDiv/>
+       <FooterDiv/>
+    </>
   )
 }

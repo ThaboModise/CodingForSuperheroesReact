@@ -1,12 +1,11 @@
 import Sidebar from "../../components/Sidebar";
 import Posts from "../../Posts/Posts";
-import SVGHeader from "../../components/SVGHeader";
-import TopBar from "../../components/TopBar";
 import "./Blog.css";
 import { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
 import { useLocation } from "react-router-dom";
+import FooterDiv from "../../components/FooterDiv";
 
 export default function Blog() {
   const [posts, setPosts] = useState([]);
@@ -25,8 +24,9 @@ export default function Blog() {
     <>
       <div className="blog">
         <Posts posts={posts}/>
-        <Sidebar/>
       </div>
+      <FooterDiv/>
+      
     </>
   )
 }

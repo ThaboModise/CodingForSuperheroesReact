@@ -6,9 +6,7 @@ import FooterDiv from "../../components/FooterDiv";
 import ShowreelMainDiv from "../../components/ShowreelMainDiv";
 import ShowreelParalex from "../../components/ShowreelParalex";
 import "./Home.css";
-import { useState } from "react";
-import { useEffect } from "react";
-import axios from "axios";
+
 
 
 

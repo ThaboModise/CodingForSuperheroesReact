@@ -1,3 +1,14 @@
+.paralex{
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    width:100%;
+    height:500px;
+    display: flex;
+    justify-content: center;
+}
+
 #showreel-paralex{
     background-image: url("../../public/images/showreel_bg_3.jpg");
     position: relative;

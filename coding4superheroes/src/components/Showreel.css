@@ -1,0 +1,18 @@
+.showreel-main-divs{
+    background-color: rgb(170, 198, 255);
+    border-bottom: 1px solid  rgb(170, 198, 255) ;
+    border-top: 1px solid  rgb(170, 198, 255) ;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    background-color: white;
+}
+
+#showreel-vid{
+    margin: auto; 
+    display:block;
+}
+
+#showreel-vid-div{
+    margin: 40px 0;
+}
