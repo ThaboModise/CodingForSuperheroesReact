@@ -15,9 +15,18 @@ dotenv.config();
 app.use(express.json());
 app.use("/images", express.static(path.join(__dirname, "/images")));
 
-mongoose.connect(process.env.MONGO_URL).then(()=>{console.log("connected to mongodb!");}).catch((err)=>{
+const connectDB = async ()=>{
+    try {
+        const conn = await mongoose.connect(process.env.MONGO_URL)
+    } catch (error) {
+        console.log(error);
+        process.exit(1);
+    }
+}
+
+/*mongoose.connect(process.env.MONGO_URL).then(()=>{console.log("connected to mongodb!");}).catch((err)=>{
     console.log("error:", err);
-})
+})*/
 
 const storage = multer.diskStorage({
     destination:(req,file,cb)=>{
@@ -39,6 +48,8 @@ app.use("/api/users",userRoute);
 app.use("/api/posts",postRoute);
 app.use("/api/categories",categoryRoute);
 
-app.listen("3131",()=>{
-    console.log("server is running!");
+connectDB().then(()=>{
+    app.listen("3131",()=>{
+        console.log("server is running!");
+    })
 })
