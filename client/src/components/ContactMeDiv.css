@@ -1,0 +1,17 @@
+#contact-me-div-container{
+	background-color: white; 
+	padding-top: 3vmax; 
+	padding-left: 2vmax;
+}
+
+#contact-me-div span{
+	font-size: 25px; 
+	font-weight: bold; 
+	color: #232365; 
+	text-align: center;
+}
+
+#contact-me-div{
+	width: 140px; 
+	border-bottom: 5px solid #ff8500;
+}

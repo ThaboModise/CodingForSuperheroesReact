@@ -1,0 +1,16 @@
+.about-columns-main-divs{
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+  width: 75%;
+  display: block;
+  margin: auto;
+  height: auto;
+}
+
+#main-divs{
+  position: relative; 
+  color: #232365; ; 
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-evenly;
+}
