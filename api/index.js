@@ -49,11 +49,11 @@ app.use("/api/posts",postRoute);
 app.use("/api/categories",categoryRoute);
 
 app.use(express.static(path.join(__dirname,"./client/build")));
-/*app.get("*",function(_, res){
+app.get("*",function(_, res){
     res.sendFile(path.join(__dirname,"./client/build/index.html"), function(err){
         res.status(500).send(err);
     })
-});*/
+});
 
 const PORT = process.env.PORT || 3131;
 
