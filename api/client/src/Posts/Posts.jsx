@@ -4,9 +4,11 @@ import './Posts.css'
 export default function Posts({posts}) {
   return (
     <div className='posts'>
-     { posts.map((p)=>(
+     { /*posts.map((p)=>(
           <Post post ={p}/>
-      ))}
+     ))*/
+        console.log("posts:", posts)
+     }
         
        
     </div>

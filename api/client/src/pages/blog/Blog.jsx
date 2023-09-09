@@ -10,11 +10,11 @@ import FooterDiv from "../../components/FooterDiv";
 export default function Blog() {
   const [posts, setPosts] = useState([]);
   const {search} = useLocation();
-  //console.log(location);
+  console.log("location:",useLocation());
   useEffect(()=>{
     const fetchPosts = async ()=>{
       const res = await axios.get("/posts" + search);
-      console.log(res.data);
+      //console.log(res.data);
      setPosts(res.data);
     }
 

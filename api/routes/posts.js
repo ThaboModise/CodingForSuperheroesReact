@@ -80,9 +80,12 @@ router.get("/", async (req,res)=>{
     const username = req.query.user;
     const catName = req.query.cat;
 
+    
+
     try {
         let posts;
         if (username) {
+            console.log("username:",username);
             posts = await Post.find({username})
         }
         else if(catName){
